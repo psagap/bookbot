@@ -1,0 +1,173 @@
+Last login: Sun Dec 14 19:56:18 on ttys000
+psagap@Pablos-MacBook-Pro ~ % bootdev --version
+bootdev version v1.21.1
+psagap@Pablos-MacBook-Pro ~ % bootdev login
+        
+        @@@@                                                           @@@@    
+    @@@@@@@@@@@ @@@@@@@                 @@@@                @@@@@@@ @@@@@@@@@@@   
+   @@@      @@@@   @@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@@@@@@@@@   @@@@     @@@@  
+  @@@                                       ...                          .. . @@@ 
+ @@@         @@@@@@@                           @@@@@@@@                    .   @@@
+@@@   .       @@   @@  @@@@   @@@@  @@@@@@@@    @@    @@ @@@@@@ @@@   @@@       @@@
+@@@  ..       @@@@@@  @@  @@ @@  @@ @  @@  @    @@     @@ @@     @@  .@@        @@@@ 
+ @@@  ..      @@   @@ @@  @@ @@  @@    @@       @@     @@ @@@@    @@ @@        @@@@  
+  @@@   .     @@   @@ @@  @@ @@  @@    @@       @@    @@  @@       @@@        @@@   
+   @@@       @@@@@@@   @@@@   @@@@     @@   @@ @@@@@@@@  @@@@@@     @    ..  @@@    
+    @@@             .                                                     ..@@@     
+     @@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@      
+      @@@@@@                                                          @@@@@@          
+          
+                            Welcome to the Boot.dev CLI!                            
+
+Please navigate to:
+https://boot.dev/cli/login
+
+Paste your login code: gbP33JNAFOzZejll
+Logged in successfully!
+psagap@Pablos-MacBook-Pro ~ % bootdev run 6120f97b-117f-4a84-94d6-a3436f21f1a4 -s
+╭──────────────────────────────────────╮
+│ ✓  Running: echo "Ready for bookbot" │
+╰┬─────────────────────────────────────╯
+ ├─  ✓  Expect exit code 0
+ ├─  ✓  Expect stdout to contain all of:
+ │       - 'Ready for bookbot'          
+
+ > Command exit code: 0
+ > Command stdout:
+
+Ready for bookbot
+
+
+All tests passed! 🎉
+
+Return to your browser to continue with the next lesson.
+
+psagap@Pablos-MacBook-Pro ~ % ls
+Applications	Desktop		Downloads	Library		Music		Public
+bookmark-app	Documents	go		Movies		Pictures
+psagap@Pablos-MacBook-Pro ~ % git Documents
+git: 'Documents' is not a git command. See 'git --help'.
+psagap@Pablos-MacBook-Pro ~ % cd Documents/bootdev
+psagap@Pablos-MacBook-Pro bootdev % ls
+webflyx
+psagap@Pablos-MacBook-Pro bootdev % rmdir github 
+rmdir: github: No such file or directory
+psagap@Pablos-MacBook-Pro bootdev % mkdir github projects
+psagap@Pablos-MacBook-Pro bootdev % cd github_projects
+psagap@Pablos-MacBook-Pro github_projects % git init
+Initialized empty Git repository in /Users/psagap/Documents/bootDEV/github_projects/.git/
+psagap@Pablos-MacBook-Pro github_projects % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+psagap@Pablos-MacBook-Pro github_projects % cd /path/to/project
+rm -rf .git          # removes git history & config, keeps your code [web:40][web:44]
+
+cd: no such file or directory: /path/to/project
+[1] 79072
+zsh: no matches found: [web:40][web:44]
+psagap@Pablos-MacBook-Pro github_projects % 
+[1]  + done       rm -rf .git # removes git history
+psagap@Pablos-MacBook-Pro github_projects % git log
+fatal: your current branch 'main' does not have any commits yet
+psagap@Pablos-MacBook-Pro github_projects % mkdir bookbot
+psagap@Pablos-MacBook-Pro github_projects % git init 
+Initialized empty Git repository in /Users/psagap/Documents/bootDEV/github_projects/.git/
+psagap@Pablos-MacBook-Pro github_projects % ls
+bookbot
+psagap@Pablos-MacBook-Pro github_projects % mkdir maleable 
+psagap@Pablos-MacBook-Pro github_projects % git clone https:github.com/psagap/bookbot
+Cloning into 'bookbot'...
+ssh: Could not resolve hostname https: nodename nor servname provided, or not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+psagap@Pablos-MacBook-Pro github_projects % git clone https://github.com/psagap/bookbot
+Cloning into 'bookbot'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+psagap@Pablos-MacBook-Pro github_projects % ls
+bookbot		maleable
+psagap@Pablos-MacBook-Pro github_projects % ls
+maleable
+psagap@Pablos-MacBook-Pro github_projects % git log
+fatal: your current branch 'main' does not have any commits yet
+psagap@Pablos-MacBook-Pro github_projects % cd mealbel                                 
+cd: no such file or directory: mealbel
+psagap@Pablos-MacBook-Pro github_projects % cd maleable
+psagap@Pablos-MacBook-Pro maleable % git clone https://github.com/psagap/bookbot
+Cloning into 'bookbot'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+psagap@Pablos-MacBook-Pro maleable % bootdev run b193d218-e022-4fb1-95be-1b9c2c440927
+╭────────────────╮
+│ Running: ls -a │
+╰┬───────────────╯
+ ├─  ?  Expect exit code 0
+ ├─  ?  Expect stdout to contain all of:
+ │       - '.git'                       
+
+ > Command exit code: 0
+ > Command stdout:
+
+.
+..
+.DS_Store
+bookbot
+psagap@Pablos-MacBook-Pro maleable % bootdev run b193d218-e022-4fb1-95be-1b9c2c440927 -s
+╭───────────────────╮
+│ X  Running: ls -a │
+╰┬──────────────────╯
+ ├─  X  Expect exit code 0
+ ├─  X  Expect stdout to contain all of:
+ │       - '.git'                       
+
+ > Command exit code: 0
+ > Command stdout:
+
+.
+..
+.DS_Store
+bookbot
+
+
+Tests failed! ❌              
+              
+Failed Step: 1                                      
+Error: expected stdout to contain .git
+
+psagap@Pablos-MacBook-Pro maleable % ls
+bookbot
+psagap@Pablos-MacBook-Pro maleable % cd bookbot
+psagap@Pablos-MacBook-Pro bookbot % bootdev run b193d218-e022-4fb1-95be-1b9c2c440927 -s
+╭───────────────────╮
+│ ✓  Running: ls -a │
+╰┬──────────────────╯
+ ├─  ✓  Expect exit code 0
+ ├─  ✓  Expect stdout to contain all of:
+ │       - '.git'                       
+
+ > Command exit code: 0
+ > Command stdout:
+
+.
+..
+.git
+README.md
+
+
+All tests passed! 🎉
+
+Return to your browser to continue with the next lesson.
+
+psagap@Pablos-MacBook-Pro bookbot % echo >> readme.md "# bookbot
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!"
+dquote> 
